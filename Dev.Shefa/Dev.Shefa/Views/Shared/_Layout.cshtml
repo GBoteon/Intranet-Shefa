@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Dev.Shefa</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Dev.Shefa.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/prism-okaidia.css" />
+    <!--Full Calendar Scripts-->
+    <link rel="stylesheet" href="~/css/main.css" />
+    <script src="~/js/main.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/image012.jpg" class="d-inline-block align-top" alt=""/>
+                </a>
+                <ul class="navbar-nav flex-grow-1 row">
+                    <li class="nav-item col">
+                        <h3><a class="nav-link text-lg-start text-dark" asp-area="" asp-controller="Home" asp-action="Index">Intranet - @ViewData["Title"]</a></h3>
+                    </li>
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between container">
+                    <ul class="navbar-nav flex-grow-1 row">
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="Rh">RH</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="Controladoria">Controladoria</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="Financeiro">Financeiro</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="Loja">Loja</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="Marketing">Marketing</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="TI">TI</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="ST">ST</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link border-bottom box-shadow" asp-area="" asp-controller="Home" asp-action="QA">QA</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Dev.Shefa - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

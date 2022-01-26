@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Agendar Sala";
+}
+<style>
+    .popper,
+    .tooltip {
+        position: absolute;
+        z-index: 9999;
+        background: #FFC107;
+        color: black;
+        width: 150px;
+        border-radius: 3px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.5);
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+
+<script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+</script>
+
+<h1>@ViewData["Title"]</h1>
+
+<form action="">
+  <label for="salas">Escolha a Sala a ser agendada:</label>
+  <select name="salas" id="salas">
+    <option value="1">Sala 1</option>
+    <option value="2">Sala 2</option>
+    <option value="3">Sala 3</option>
+    <option value="4">Sala 4</option>
+  </select>
+  <input class="button" type="submit" value="Reservar">
+</form>
+
+<div class="text-center">
+    <div id='calendar'></div>
+</div>
